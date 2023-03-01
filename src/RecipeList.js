@@ -1,4 +1,7 @@
+import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Fragment, useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import { Spinner } from "./Spinner";
 
 
@@ -33,6 +36,13 @@ export function RecipeList() {
                                 <img src={`${process.env.REACT_APP_BACKEND_URL}/static/images/${recipe.imageURL}`} alt="" className="card-img-top mb-2" />
                                 <div className="card-body">
                                     <h5 className="card-title">{recipe.name}</h5>
+                                </div>
+                                <div className="w-75 p-3">
+                                    <NavLink to={`/recept-szerkesztes/${recipe.slug}`}>
+                                        <button className="btn btn-sm btn-outline-warning mr-2">
+                                            <FontAwesomeIcon icon={faPencilAlt} />
+                                        </button>
+                                    </NavLink>
                                 </div>
                             </div>
                         </div>
