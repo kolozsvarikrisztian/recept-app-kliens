@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <Router>
+    <Router forceRefresh>
       <nav className="navbar fixed-top navbar-expand-sm navbar-dark bg-primary mb-3">
         <div id="navbarNav">
           <ul className="navbar-nav lead font-weight-bold">

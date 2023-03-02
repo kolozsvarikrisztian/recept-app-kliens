@@ -35,6 +35,7 @@ export function RecipeList() {
                     onApproved = {async () => {
                         setPending(true);
                         await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/recipes/${deleteId}`, {method: "DELETE"});
+                        setDeleteId("");
                         await fetchRecipes();
                         setPending(false);
                     }}
